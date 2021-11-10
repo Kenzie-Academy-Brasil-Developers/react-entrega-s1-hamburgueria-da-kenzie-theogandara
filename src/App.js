@@ -111,7 +111,7 @@ function App() {
               setUserInput(e.target.value);
             }}
           />
-          <button onClick={showProducts}>Pesquisar</button>
+          <button className= "buttonPesquisar" onClick={showProducts}>Pesquisar</button>
         </div>
       </nav>
       <div className="conteudo">

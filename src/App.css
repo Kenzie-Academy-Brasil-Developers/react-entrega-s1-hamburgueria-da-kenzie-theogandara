@@ -1,15 +1,28 @@
 .App {
   text-align: center;
   align-content: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  font-family: sans-serif;
 }
 
 .search input {
   border: none;
+}
+
+li h4 {
+  font-weight: 600;
+  font-family: sans-serif;
+}
+
+li p {
+  font-size: 14px;
+  color: grey;
+}
+
+li span {
+  color: green;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: sans-serif;
 }
 
 textarea:focus,
@@ -20,34 +33,56 @@ select:focus {
   outline: 0;
 }
 
+span{
+  padding: 10px;
+}
+
 .search {
-  /* Auto Layout */
+  width: 314px;
+  display: flex;
+  border-radius: 8px;
+  justify-content: space-between;
+  border: 1px solid #e0e0e0;
+}
 
+.buttonPesquisar {
+  width: 24%;
+  height: 40px;
+}
 
+.bar {
+  display: flex;
+  height: 13vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border-bottom: 2px solid #e0e0e0;
+  padding: 4px;
 }
 
 button {
   border-style: none;
   height: 40px;
   width: 107px;
-  left: 265px;
-  top: 10px;
   border-radius: 8px;
   padding: 0px, 20px, 0px, 20px;
   background-color: #27ae60;
   color: #fff;
-
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 
+main {
+  height: 70vh;
+  display: flex;
+  align-content: stretch;
+  align-items: center;
+}
+
 main ul {
-  height: 346px;
-  width: 100%;
-  left: 16px;
-  top: 154px;
-  border-radius: 5px;
+  height: 370px;
+  width: 100vw;
   overflow-y: scroll;
   display: flex;
   padding: 0%;
@@ -57,14 +92,16 @@ ul li {
   list-style: none;
   display: flex;
   align-content: center;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: space-between;
   flex-wrap: wrap;
   flex-direction: column;
   text-align: center;
-  border: solid 1px black;
+  border: 2px solid #e0e0e0;
   margin: 2px;
+  padding: 10px;
   border-radius: 4px;
+  height: 330px;
 }
 
 img {
@@ -74,17 +111,9 @@ img {
 .title {
   display: flex;
   align-items: baseline;
+  height: 30px;
+  font-size: 22px;
   justify-content: center;
-}
-
-.title h2 {
-  font-size: 20px;
-  color: #e60000;
-  margin: 5px;
-}
-
-span {
-  margin: auto;
 }
 
 .carrinho {
@@ -95,13 +124,16 @@ span {
 }
 
 .titleCarrinho {
-  width: 100%;
+  width: 90%;
   display: flex;
   border-radius: 4px;
   background-color: #27ae60;
   height: 50px;
   align-items: flex-end;
-  max-width: 440px;
+  font-size: 22px;
+  color: #fff;
+  max-width: 370px;
+  font-family: sans-serif;
 }
 
 .carrinho h2 {
@@ -117,12 +149,13 @@ span {
 
 .carrinho ul li {
   display: flex;
-  height: 77px;
-  width: 100%;
-  align-content: space-between;
+  height: 52px;
+  width: 280px;
+  align-content: center;
   flex-direction: row;
   justify-content: space-between;
   max-width: 380px;
+  align-items: center;
 }
 
 .carrinho ul li button {
@@ -152,70 +185,41 @@ span {
   max-width: 250px;
 }
 
-@media screen and (min-width: 750px) {
-  .search {
-    /* Frame 105 */
-
-    /* Auto Layout */
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 10px 0px 15px;
-
-    position: absolute;
-    width: 365px;
-    height: 60px;
-    left: 1120px;
-    top: 10px;
-
-    background: #ffffff;
-    /* grey-100 */
-
-    border: 2px solid #e0e0e0;
-    box-sizing: border-box;
-    border-radius: 8px;
-  }
-  .bar {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    height: 80px;
-  }
-  .carrinho {
-    display: inline-block;
-    width: 25vw;
-    height: 50vh;
-  }
-
+@media screen and (min-width: 1000px) {
   main {
-    display: inline-block;
-    width: 75vw;
+    width: 67vw;
+    align-items: flex-start;
   }
 
-  main ul {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    overflow-y: unset;
-    height: 735px;
-    width: 940px;
-  }
-
-  main ul li {
-    width: 300;
-    height: 346px;
-
-    border: 2px solid #e0e0e0;
-    box-sizing: border-box;
-    border-radius: 5px;
+  .carrinho {
+    width: 25vw;
   }
 
   .conteudo {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: flex-start;
+    padding: 20px;
+  }
+
+  main ul {
+    height: 700px;
+    width: 100%;
+    overflow-y: unset;
+    display: flex;
+    padding: 0%;
+    flex-wrap: wrap;
+  }
+
+  ul li {
+    width: 273px;
+  }
+
+  .bar {
+    height: 8vh;
+    flex-direction: row;
     justify-content: space-around;
   }
 }
