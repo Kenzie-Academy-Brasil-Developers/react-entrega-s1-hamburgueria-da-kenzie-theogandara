@@ -57,6 +57,9 @@ function App() {
   const [userInput, setUserInput] = useState("");
   const [userSearching, setUserSearching] = useState(false);
 
+  // essa função compara o input do usuário com os nomes e as categorias do produto
+  // usei o includes pra fazer essa verificação -> também mudo o state de searching pra true.
+
   const showProducts = () => {
     const newList = products.filter((element) => {
       return (
@@ -68,6 +71,7 @@ function App() {
     setUserSearching(true);
   };
 
+  
   const handleClick = (productId) => {
     const found = products.find((element) => {
       return (
